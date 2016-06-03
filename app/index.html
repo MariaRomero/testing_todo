@@ -5,7 +5,8 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="./js/app.js"></script>
     <script src="js/controllers/ToDoController.js"></script>
-     <script src="js/factories/factory.js"></script>
+    <script src="js/services/service.js"></script>
+    <script src="js/factories/factory.js"></script>
     <title>Todos App</title>
 
   </head>
@@ -13,7 +14,7 @@
     <div id="todos" ng-controller="ToDoController as ctrl">
       <p ng-repeat="todo in ctrl.todos">
         {{ todo.text }}: {{ todo.completed ? "completed" : "not completed"}}
-      <input ng-model="todo.completed" type="checkbox">  
+      <input ng-model="todo.completed" type="checkbox">
       </p>
       <input id="todoText" type="text" ng-model="todoText">
       <button id="Add" ng-click="ctrl.add(todoText)">Add</button>
